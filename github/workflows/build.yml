@@ -18,13 +18,13 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Install Gradle
+    - name: Generate Gradle Wrapper & Build
       run: |
         sudo apt-get update
         sudo apt-get install -y gradle
-
-    - name: Build debug APK with Gradle
-      run: gradle assembleDebug
+        gradle wrapper --gradle-version 8.2
+        chmod +x gradlew
+        ./gradlew assembleDebug
 
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
