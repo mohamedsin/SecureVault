@@ -18,10 +18,13 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Generate Gradle Wrapper & Build
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
+
+    - name: Build with Gradle
       run: |
-        # استخدام أداة Gradle الرسمية للتحقق وتوليد إصدار حديث (مثل 8.0)
-        gradle wrapper --gradle-version 8.0
+        # استخدام أوامر الجرادل مباشرة عبر توليد الـ wrapper بنسخة متوافقة 8.2
+        gradle wrapper --gradle-version 8.2
         chmod +x gradlew
         ./gradlew assembleDebug
 
