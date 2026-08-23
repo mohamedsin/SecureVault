@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#121212">
+
+    <!-- أيقونة أو عنوان الخزنة -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔒 خزنة الصور الآمنة"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="32dp" />
+
+    <!-- زر فتح البصمة -->
+    <Button
+        android:id="@+id/btnAuthenticate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="فتح باستخدام البصمة"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+    <!-- المحتوى السري (يظهر بعد فتح البصمة) -->
+    <TextView
+        android:id="@+id/tvSecretContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="✨ مرحباً بك في الخزنة السرية! تم فك التشفير بنجاح."
+        android:textSize="18sp"
+        android:textColor="#00E676"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="32dp" />
+
+</LinearLayout>
